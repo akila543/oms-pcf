@@ -1,7 +1,7 @@
 applications:
- - name: oms-core1
+ - name: oms-inventory1
    memory: 512m
    instances: 1
-   path: ./oms-core
+   path: ./oms-inventory/oms-inventory.war
    routes:
-   - route: oms-core1.cfapps.io
+   - route: oms-inventory1.cfapps.io
