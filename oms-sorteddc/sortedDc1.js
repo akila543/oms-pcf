@@ -23,7 +23,7 @@ const express = require('express')
     , amqp = require('amqplib/callback_api');
 //var SORTEDDC_HOSTNAME=172.18.0.8;
 //
-request.get('http://oms-orderrouting.cfapps.io/ors/')                          // sending the sorted dc's lcoation details and the respective orderId to ORS
+request.get('http://oms-orderrouting1.cfapps.io/ors/')                          // sending the sorted dc's lcoation details and the respective orderId to ORS
         .end((err, res)=>{
           console.log('from sorted dc to ors res: ',res.text);
 //          resp.send('Hello ORS')
@@ -74,7 +74,7 @@ db.once('open', function() {
            dcDetails['dcList'] = dcList;
            dcDetails['dcLocDetails']=dcLocDetails;
            console.log(JSON.stringify(dcDetails.dcLocDetails,"order routing url check"));
-           request.get('http://oms-orderrouting.cfapps.io/ors/order/')                       // sending the sorted dc's lcoation details and the respective orderId to ORS
+           request.get('http://oms-orderrouting1.cfapps.io/ors/order/')                       // sending the sorted dc's lcoation details and the respective orderId to ORS
            .query({dcDetails : JSON.stringify(dcDetails.dcLocDetails), orderId: orderId})
            .end((err, res)=>{
              console.log('response after hitting ',res.text);
@@ -110,7 +110,7 @@ db.once('open', function() {
         }
         dcDetails['dcList'] = dcList;
         dcDetails['dcLocDetails']=dcLocDetails;
-        request.get('http://oms-orderrouting.cfapps.io/ors/ors/order')                          // sending the sorted dc's lcoation details and the respective orderId to ORS
+        request.get('http://oms-orderrouting1.cfapps.io/ors/ors/order')                          // sending the sorted dc's lcoation details and the respective orderId to ORS
                 .query({dcDetails : JSON.stringify(dcDetails.dcLocDetails), orderId: orderId})
                 .end((err, res)=>{
                   console.log('res: ',res.text);

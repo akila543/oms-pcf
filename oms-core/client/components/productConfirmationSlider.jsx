@@ -304,7 +304,7 @@ class ProductConfirmationSlider extends React.Component
                           <Header as='h1' className="HeaderStyle">
                             {' '}Thank You for your Order</Header>
                           <Header as='h2' className="HeaderStyle">
-                            {' '}Your Order Summary</Header>
+                            {' '}Your Order</Header>
                         </center>
                         <hr/>
                         <p>Order Number: #959647063</p>
