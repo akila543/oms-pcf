@@ -1,8 +1,33 @@
 applications:
- - name: oms-core1
+ - name: oms-inventory1
+   memory: 64m
+   instances: 1
+   path: ./oms-inventory/
+   routes:
+   - route: oms-inventory1.cfapps.io
+ - name: oms-orderrouting1
+   memory: 128m
+   instances: 1
+   path: ./ors-orderrouting
+   routes:
+   - route: oms-orderrouting1.cfapps.io
+ - name: oms-core
    memory: 512m
    instances: 1
-   host: oms-core1
-   path: ./oms-core
+   path: ./oms-core/oms-core.war
    routes:
-   - route: oms-core1.cfapps.io
+   - route: oms-core1.cfapps.io   
+ - name: oms-sorteddc1
+   memory: 128m
+   instances: 1
+   path: ./oms-sorteddc
+   routes:
+   - route: oms-sorteddc1.cfapps.io
+ - name: oms-geodistance
+   memory: 64m
+   instances: 1
+   path: ./oms-geodistance
+   routes:
+   - route: oms-geodistance1.cfapps.io
+
+ 
