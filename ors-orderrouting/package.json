@@ -1,0 +1,17 @@
+{
+  "name": "ors",
+  "version": "1.0.0",
+  "description": "order routing services",
+  "main": "orderRouting.js",
+  "scripts": {
+    "start": "node ./orderRouting.js"
+  },
+  "author": "prateek pandey",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^2.2.31",
+    "express": "^4.16.2",
+    "superagent": "^3.7.0",
+    "amqplib": "^0.5.1"
+  }
+}
