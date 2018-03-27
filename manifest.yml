@@ -8,6 +8,6 @@ applications:
  - name: oms-orderrouting1
    memory: 128m
    instances: 1
-   path: ./oms-orderrouting
+   path: ./ors-orderrouting
    routes:
    - route: oms-orderrouting1.cfapps.io
