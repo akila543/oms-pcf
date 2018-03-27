@@ -29,5 +29,6 @@ applications:
    path: ./oms-geodistance
    routes:
    - route: oms-geodistance1.cfapps.io
+   health-check-type: process
 
  
