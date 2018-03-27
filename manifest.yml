@@ -2,7 +2,6 @@ applications:
  - name: oms-core1
    memory: 512m
    instances: 1
-   host: oms-core1
    path: ./oms-core
    routes:
    - route: oms-core1.cfapps.io
