@@ -14,7 +14,6 @@ applications:
  - name: oms-core
    memory: 512m
    instances: 1
-   path: ./oms-core/oms-core.war
    routes:
    - route: oms-core1.cfapps.io   
  - name: oms-sorteddc1
